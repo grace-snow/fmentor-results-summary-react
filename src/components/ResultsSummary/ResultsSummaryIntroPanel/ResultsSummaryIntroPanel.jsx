@@ -6,7 +6,7 @@ import VisuallyHidden from '../../VisuallyHidden/VisuallyHidden';
 function ResultsSummaryIntroPanel({ children }) {
   return (
     <div className='flex flex-col items-center w-full text-white bg-gradient-to-b from-violet-400 via-violet-500 via-30% to-violet-600 to-90% pt-400 px-600 pb-600 md:pt-600 md:pb-700 rounded-b-500 md:rounded-500'>
-      <h1 className='font-extrabold text-neutral-300 text-18-24'>{cmsConfig.mainHeading}</h1>
+      <h1 className='font-bold text-neutral-300 text-18-24'>{cmsConfig.mainHeading}</h1>
       <p className='flex flex-col items-center justify-center p-6 my-400 md:mt-500 rounded-full aspect-square w-[8.75rem] md:w-[12.5rem] bg-gradient-to-b from-violet-800 to-violet-100'>
         <span className='font-extrabold leading-none text-56-72 my-50'>{results.summary.score}</span> <span className='font-bold opacity-50 text-neutral-300'>of {results.summary.total}</span>
       </p>
