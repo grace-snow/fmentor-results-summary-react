@@ -1,13 +1,15 @@
 import React from 'react';
+import ResultsSummaryList from '../ResultsSummaryList/ResultsSummaryList';
+import ButtonPrimary from '../../Button/ButtonPrimary/ButtonPrimary'
 
 import { cmsConfig } from '../../../data/resultsSummary';
-import ResultsSummaryList from '../ResultsSummaryList/ResultsSummaryList';
 
 function ResultsSummaryMainPanel() {
   return (
-    <div>
-      <h2>{cmsConfig.summaryHeading}</h2>
+    <div className='w-full bg-white py-400 px-500 md:p-600'>
+      <h2 className='font-bold text-violet-900 md:text-left'>{cmsConfig.summaryHeading}</h2>
       <ResultsSummaryList />
+      <ButtonPrimary className='w-full'>{cmsConfig.buttonLabel}</ButtonPrimary>
     </div>
   )
 }

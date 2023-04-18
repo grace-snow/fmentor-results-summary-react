@@ -6,13 +6,14 @@ import { results } from "../../../data/resultsSummary";
 function ResultsSummaryList() {
 
   return (
-    <ol>
+    <ol className='flex flex-col items-center gap-4 my-400' role="list">
       {results.categories.map((item) => (
         <ResultsSummaryListItem
           key={`${item.label.toLowerCase()}-${crypto.randomUUID()}`}
-          name={item.label}
+          category={item.label}
+          icon={item.icon}
           score={item.score}
-          total={item.total} 
+          total={item.total}
         />
       ))}
     </ol>

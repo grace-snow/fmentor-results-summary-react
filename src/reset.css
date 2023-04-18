@@ -1,0 +1,113 @@
+/** CSS Reset 
+ ** Combination of resets by Andy Bell and Josh Comeau
+ ** See https://andy-bell.co.uk/a-modern-css-reset/
+ ** and https://www.joshwcomeau.com/css/custom-css-reset/
+ ** for more a deeper understanding.
+ */
+
+/* 1. use :where() to lower specificity */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margins */
+* {
+  margin: 0;
+}
+
+/* Height 100% on both html AND body can be buggy */
+html {
+  height: 100%;
+}
+
+/* Make sure body stretches to the full viewport height */
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  line-height: 1.6;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+/** 1 */
+:where(ul[role="list"]),
+:where(ol[role="list"]) {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+/** 1 */
+:where(a:not([class])) {
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Consistant image sizing */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Make non-inheriting elements inherit font styles */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Needs review! I don't like this in a general reset */
+/* p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+} */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.15;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* isolate stacking context in React/Next */
+#root,
+#__next {
+  isolation: isolate;
+  min-height: inherit;
+}

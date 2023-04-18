@@ -1,3 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --16-18: clamp(1rem, calc(0.96rem + 0.3vw), 1.125rem);     /* 16 -> 18 */
+    --18-24: clamp(1.125rem, calc(1.2rem + 0.53vw), 1.50rem);   /* 18 -> 24 */
+    --24-32: clamp(1.5rem, calc(1.2rem + 1.05vw), 2.00rem);      /* 24 -> 32 */
+    --56-72: clamp(3.5rem, calc(0.96rem + 4.19vw), 4.5rem);   /* 56 -> 72 */
+  }
+
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    line-height: 1.3;
+    font-family: "'Hanken Grotesk', system-ui, sans-serif";
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  :where(#root) {
+    all: inherit;
+  }
+
+  *:focus-visible {
+    outline: 0.2em solid theme(colors.violet.500);
+    outline-offset: -0.01em;
+  }
+}
+
+@layer components {
+  .c-results-summary {
+    --Reaction: theme(colors.category.reaction);
+    --Memory: theme(colors.category.memory);
+    --Verbal: theme(colors.category.verbal);
+    --Visual: theme(colors.category.visual);
+  }
+}

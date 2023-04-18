@@ -4,7 +4,7 @@ import { siteData } from '../../data/site';
 
 function FooterAttribution({ className }) {
   return (
-    <footer className={`center ${className}`}>
+    <footer className={`center p-4 ${className ? className : ''}`}>
       <p className='attribution'>
         Challenge by{" "}
         <a href={siteData.challengeProviderUrl} target='_blank' rel="noopener" className='underline transition duration-500 ease-out hover:text-brand-2 focus-visible:outline-brand-2'>

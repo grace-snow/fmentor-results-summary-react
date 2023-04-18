@@ -15,24 +15,25 @@ export const results = {
   categories: [
     {
       label: "Reaction",
-      icon: "",
+      icon: "./images/icon-reaction.svg",
       score: "80",
       total: "100",
     },
     {
       label: "Memory",
-      icon: "",
+      icon: "./images/icon-memory.svg",
       score: "92",
       total: "100",
     },
     {
       label: "Verbal",
-      icon: "",
+      icon: "./images/icon-verbal.svg",
       score: "61",
       total: "100",
     },
     {
       label: "Visual",
+      icon: "./images/icon-visual.svg",
       score: "72",
       total: "100",
     },
