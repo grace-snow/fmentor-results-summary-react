@@ -6,7 +6,7 @@ import { results } from "../../../data/resultsSummary";
 function ResultsSummaryList() {
 
   return (
-    <ol className='flex flex-col items-center gap-4 my-400' role="list">
+    <ol className='flex flex-col gap-4 my-400' role="list">
       {results.categories.map((item) => (
         <ResultsSummaryListItem
           key={`${item.label.toLowerCase()}-${crypto.randomUUID()}`}
