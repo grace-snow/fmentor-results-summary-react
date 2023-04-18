@@ -9,8 +9,6 @@
     --24-32: clamp(1.5rem, calc(1.2rem + 1.05vw), 2.00rem);      /* 24 -> 32 */
     --56-72: clamp(3.5rem, calc(0.96rem + 4.19vw), 4.5rem);   /* 56 -> 72 */
   }
-
-  @import 'unfonts.css';
   
   body {
     min-height: 100vh;
