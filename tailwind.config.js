@@ -33,6 +33,9 @@ export default {
       body: ["Hanken Grotesk", "cursive"],
     },
     extend: {
+      boxShadow: {
+        ui: "0px 1.875rem 3.75rem hsla(224, 82%, 58%, 0.15)",
+      },
       borderRadius: {
         50: "0.25rem", // 4px
         100: "0.5rem", // 8px
